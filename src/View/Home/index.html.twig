@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+    {% block content %}
+        {% if not session.login %}
+        <section class = "bio">
+            <div class="text">
+                <h2>Biography</h2>
+                <p class="text-bio">Ready to join the adventure and become friend with the rest
+                of the universe ?<br>
+                Wanna become a part of our community and join the largest social network of the universe ?<br>
+                If so, you know what to do ...</p>
+            </div>
+            <div>
+                <img class="img" src="https://media.giphy.com/media/xT9IgioE60R9797Uc0/giphy.gif" alt="image planet">
+            </div>
+        </section>
+        <section class= "redirected">
+            <div class= "row">
+                <div class= "col-3"></div>
+                <div class= "button">
+                    <a href="/home/signUp"><i class="em em-alien" aria-role="presentation" aria-label="EXTRATERRESTRIAL ALIEN"></i> Sign Up</a>
+                </div>
+                <!--<div class= "col-2"></div>-->
+                <div class= "button">
+                    <a href="/home/login"><i class="em em-rocket" aria-role="presentation" aria-label="ROCKET"></i> Login</a>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        <!-- PARTIE SI ON EST CONNECTE-->
+        {% if session.login %}
+            <div class="container-fluid">
+                <div class="row">
+                    {% for posts in post %}
+                        {% for post in posts %}
+                        <div class="card col-11 mt-3 mr-2 bg-light mb-3">
+                            <div class="card-headerPost">From {{ post.user_pseudo }}</div>
+                            <div class="card-body">
+                                {% if post.img %}
+                                    <img class="card-img-topPost" src="{{ post.img }}" alt="post image">
+                                {% endif %}
+                                <h5 class="card-titlePost">{{ post.title }}</h5>
+                                <p class="card-text">{{ post.content }}</p>
+                                <p class="card-text"><img class="pouceLike" src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53a.png" alt=""> {{ post.score }}</p>
+                                <a href="/post/showComments/{{ post.id }}" class="btn-commentPost">Comments</a>
+                                <a href="/post/like/{{ post.id }}" class="btn-like">Like<img class="imglike" src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b29b8.png" alt=""></a>
+                            </div>
+                        </div>
+                            {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    {% endblock %}

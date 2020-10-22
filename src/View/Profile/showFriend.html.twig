@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+{% for results in result %}
+
+    <div class="cardFriend bg-lightFriend mb-3" style="max-width: 30rem;">
+        <div class="card-header"><h1 class="name-profile">{{ results.firstname }}</h1></div>
+        <div class="card-body">
+            <a href="/profile/profileFriend/{{ results.id }}" ><img src="{{ results.avatar }}" class="img-profile" alt="avatar"></a>
+            <a href="/profile/deleteFriend/{{ results.id }}" class="btn-deleteFriend" role="button" aria-pressed="true">Delete Friend<img class="imgDeleteFriend" src="http://assets.stickpng.com/thumbs/588713cbd27829db9cf6da6a.png" alt=""></a>
+        </div>
+    </div>
+
+    {% endfor %}
+{% endblock %}

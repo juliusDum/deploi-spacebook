@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<form method="post">
+    <p>
+        <label class="pseudoChat" for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" /><br />
+        <label class="messageChat" for="exampleFormControlTextarea1">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="content" id="content" rows="3"></textarea>
+        <button type="submit" class="btn-sendMessage">Send</button>
+    </p>
+</form>
+
+    {% for message in messages %}
+    <div class="contentMessage">
+        <p class="messagePseudo">{{ message.pseudo }}</p>
+        <p>{{ message.content }}</p>
+        <p class="messageDate">{{ message.date }}</p>
+        <img class="separateurMessage" src="http://assets.stickpng.com/thumbs/58e900c5eb97430e819064d5.png" alt="">
+    </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,5 @@
+/vendor/
+/temp/*
+.phpcs-cache
+*.cache
+.idea

@@ -1,0 +1,8 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <h1>Message received</h1>
+        <p>Thank you very much for contacting us about <strong class="thanks">{{ send.subject }}</strong>. <br>
+            A member of our team will get back to you shortly using this email : <strong class="thanks">{{ send.email }}</strong>.<br>
+            Hope to see you soon on Space Book.</p>
+    <a href="/Home/index" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Take me Home</a>
+{% endblock %}

@@ -1,0 +1,472 @@
+body{
+    margin: 0;
+    padding-top: 150px;
+}
+/*Header*/
+.navbar, .fixed-top, .navbar-expand-lg, .navbar-light, .bg-light{
+    width: 100%;
+    background: linear-gradient(#FF504A, #FF8956);
+}
+
+.nav-link{
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 40px;
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1A171F), to(#262278));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    padding-right: 10px;
+    font-size: 40px;
+    font-family: 'Press Start 2P', cursive;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#045FB4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*footer*/
+footer{
+    margin-top: 10%;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .nav, .fixed-bottom, .justify-content-center{
+    background: linear-gradient(#FF504A, #FF8956);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.copyright {
+    display: flex;
+    padding-top: 9px;
+}
+footer .nav-link{
+    margin-left: 0;
+}
+
+/*logo nav*/
+.logo{
+    width: 50px;
+    padding-bottom: 20px;
+}
+
+/*home page*/
+.container{
+    margin: 0 auto;
+}
+
+.bio{
+    display: flex;
+    justify-content: space-between;
+    line-height:30px;
+    text-align: justify;
+}
+
+.text-bio{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+}
+
+.text{
+    margin-right: 12%;
+}
+
+.text h2{
+    font-family: 'Press Start 2P', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.img{
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius: 150px;
+    width:300px;
+    height:300px;
+    box-shadow: 1px 1px 12px #555;
+}
+
+.button{
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#FF504A, #FF8956);
+    margin-top: 10%;
+    font-size: 15px;
+    margin-left: 10%;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+}
+.button a{
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#045FB4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+.card-body{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.img-profile {
+
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius: 150px;
+    width:300px;
+    height:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 12px #555;
+}
+
+
+.name-profile {
+    font-family: 'Press Start 2P', cursive;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#045FB4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 20px;
+}
+
+
+.btn-friend {
+    background: -webkit-gradient(linear, left top, left bottom, from(#53F7E3), to(#E6F960));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn-edit {
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#91F845, #F6C705);
+    margin-top: 10%;
+    font-size: 15px;
+    margin-left: 10%;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-delete {
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#F63C05, #F6C705);
+    margin-top: 10%;
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 15%;
+}
+
+.thanks {
+    color: #262278;
+}
+.btn-show {
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#A645F8, #F6C705);
+    margin-top: 5%;
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 15%;
+}
+
+.btn-deleteFriend {
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#34E5E0, #F6C705);
+    margin-top: 10%;
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 13%;
+}
+.col-12{
+    background: -webkit-gradient(linear, left top, left bottom, from(#BE0707), to(#F68805));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 80px;
+}
+
+.cardFriend{
+    margin-left: 15px;
+    margin-right: 10px;
+    display: inline-block;
+    background: linear-gradient(#FF504A, #FF8956);
+    border-radius: 6px;
+}
+
+.btn-follow{
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#8CA3F9, #F6C705);
+    margin-top: 10%;
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+ .no-gutters{
+    background: linear-gradient(#FC534E, #FBC469);
+     box-shadow: 12px 12px 24px
+     rgba(79,209,197,.64);
+}
+.card-img{
+   height: 100%;
+    border-radius: 0;
+}
+
+.fuséeSeeFriend{
+    width: 60px;
+    margin-left: 20px;
+}
+.imgDeleteFriend{
+    width: 21px;
+    margin-left: 10px;
+    padding-bottom: 8px;
+}
+
+.imgFollow {
+    width: 21px;
+    margin-left: 10px;
+    padding-bottom: 8px;
+}
+
+.btn-editComment{
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#34E5E0, #F6C705);
+    margin-top: 10%;
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 16%;
+}
+
+.btn-deleteComment{
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#F63C05, #F6C705);
+    margin-top: 10%;
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 25%;
+}
+
+.btn-backComment{
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#8CA3F9, #F6C705);
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+}
+h3{
+    font-family: 'Press Start 2P', cursive;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#045FB4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2{
+    font-family: 'Press Start 2P', cursive;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#045FB4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary{
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#34E5E0, #F6C705);
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.card-headerPost{
+    font-family: 'Press Start 2P', cursive;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#045FB4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-titlePost{
+    margin-top: 20px;
+}
+
+.card-img-topPost{
+    max-width: 80%;
+    margin-left: 10%;
+    border-radius: 6px;
+}
+
+.btn-commentPost {
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#34E5E0, #F6C705);
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 25%;
+}
+
+.btn-like {
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#F63C05, #F6C705);
+    margin-top: 10%;
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 25%;
+}
+
+.imglike{
+    width: 21px;
+    margin-left: 10px;
+    padding-bottom: 6px;
+}
+
+.pseudoChat, .messageChat, .noComment, .contentP, .contactUs {
+    font-family: 'Press Start 2P', cursive;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#045FB4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.messageChat{
+   margin-left: 45%;
+}
+
+.btn-sendMessage{
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background: linear-gradient(#F63C05, #F6C705);
+    margin-top: 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px
+    rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 47%;
+}
+
+.contentMessage{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.messagePseudo{
+    background: -webkit-gradient(linear, left top, left bottom, from(#F63C05), to(#045FB4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+}
+
+.messageDate{
+    font-size: 10px;
+    margin-bottom: 10px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.separateurMessage{
+    width: 80px;
+}
+
+.pouceLike{
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.btn-editComment{
+    margin-left: 0;
+}
+.form-control{
+    font-family: 'Press Start 2P', cursive;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#045FB4));
+    -webkit-background-clip: text;
+}

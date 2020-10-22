@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class="rowAllUser">
+    <h1 class="col-12">Users</h1>
+</div>
+<div class="row-user">
+    <ul class="list">
+    {% for user in users %}
+        <a href="/profile/profileUser/{{ user.id }}" ><img src="{{ user.avatar }}" class="img-profile" alt="avatar"></a>
+        <h1 class="name-profile">{{ user.firstname }}</h1>
+        <h2 class="name-profile">{{ user.lastname }}</h2>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

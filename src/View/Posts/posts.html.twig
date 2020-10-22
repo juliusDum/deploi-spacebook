@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h3>{{ posts[0].user_firstname }} {{ posts[0].user_lastname }} Posts</h3>
+    <a href="/post/addPost" class="btn-edit" role="button" aria-pressed="true">  ADD A NEW POST  </a>
+    <br/>
+    <br/>
+    <div>
+        <div class="row no-gutters1">
+                {% for post in posts %}
+            <div class="card col-11 mt-3 mr-2 bg-light mb-3">
+                    <div class="card-body">
+                        {% if post.img %}
+                        <div class="col-md-8">
+                            <img src="{{ post.img }}" class="card-img" alt="picture">
+                        </div>
+                        <br/>
+                        {% endif %}
+                        <p class="card-text">Post #{{ post.id }} </p>
+                        <p class="card-text">Title : {{ post.title }} </p>
+                        <p class="card-text">Content : {{ post.content }} </p>
+                        <p class="card-text">Likes : {{ post.score }}</p>
+                        <a href="/post/editPost/{{ post.id }}" class="btn-edit" role="button" aria-pressed="true">Edit Post</a>
+                        <a href="/post/deletePost/{{ post.id }}" class="btn-delete" role="button" aria-pressed="true">Delete Post</a>
+                        <a href="/post/showComments/{{ post.id }}"class="btn-edit" role="button" aria-pressed="true">Show comments</a>
+                    </div>
+            </div>
+                {% else %}
+                    <p>No post to display</p>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h2>Edit comment {{ comment.id }} </h2>
+    <form method="post">
+        <input type="hidden" value="{{ comment.id }}" name="id">
+        <div class="form-group col-md-6">
+            <label for="content">Content</label>
+            <textarea class="form-control" id="content" name="content" rows="5">{{ comment.content }}</textarea>
+        </div>
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+{% endblock %}

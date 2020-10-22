@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="{{ profile.avatar }}" class="card-img" alt="avatar">
+            </div>
+            <div class="col-mx-10">
+                <div class="card-body">
+                    <h5 class="card-title">{{ profile.firstname ~" "~ profile.lastname }} </h5>
+                    <p class="card-text">Pseudo : {{ profile.pseudo }} </p>
+                    <p class="card-text">Date of Birth : {{ profile.date_of_birth|date("m/d/Y") }} </p>
+                    <p class="card-text">Galaxy : {{ profile.galaxy_name }} </p>
+                    <p class="card-text">Planet : {{ profile.planet_name }} </p>
+                    <p class="card-text">Password : {{ profile.password }} </p>
+                    <p class="card-text">email: {{ profile.email }} </p>
+                    <p class="card-text">Description : {{ profile.description }}</p>
+                    <a class="btn-friend" href="/profile/showFriend/{{ profile.id }}">see friends<img class="fuséeSeeFriend" src="http://assets.stickpng.com/thumbs/58e900c5eb97430e819064d5.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="/profile/edit/{{ profile.id }}" class="btn-edit" role="button" aria-pressed="true">Edit Profile</a>
+    <a href="/profile/delete/{{ profile.id }}" class="btn-delete" role="button" aria-pressed="true">Delete Profile</a>
+    <a href="/post/showPosts/{{ profile.id }}" class="btn-show">Show posts</a>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'admin_layout.html.twig' %}
+
+{% block content %}
+    <h1>Users Manager</h1>
+    <div class="row">
+        <table class="table table-dark">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pseudo</th>
+                <th>Email</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for profile in profiles %}
+                <tr>
+                    <td><a href="/Admin/userProfile/{{ profile.id }}">{{ profile.id }}</a></td>
+                    <td>{{ profile.pseudo }}</td>
+                    <td>{{ profile.email }}</td>
+                    <td>{{ profile.firstname }}</td>
+                    <td>{{ profile.lastname }}</td>
+                    <td>
+                        <a href="/Admin/deleteUser/{{ profile.id }}" class="btn btn-primary">Delete / Ban</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

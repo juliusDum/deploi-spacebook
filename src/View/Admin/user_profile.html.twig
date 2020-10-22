@@ -1,0 +1,44 @@
+{% extends 'admin_layout.html.twig' %}
+
+{% block content %}
+    <h1>User Profile</h1>
+<div class="card mb-3 bg-dark text-white">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="{{ profile.avatar }}" class="card-img" alt="avatar">
+        </div>
+        <div class="col-mx-10">
+            <div class="card-body">
+                <h5 class="card-title">{{ profile.firstname ~" "~ profile.lastname }} </h5>
+                <p class="card-text">Pseudo : {{ profile.pseudo }} </p>
+                <p class="card-text">Date of Birth : {{ profile.date_of_birth|date("m/d/Y") }} </p>
+                <p class="card-text">Galaxy : {{ profile.galaxy_name }} </p>
+                <p class="card-text">Planet : {{ profile.planet_name }} </p>
+                <p class="card-text">Password : {{ profile.password }} </p>
+                <p class="card-text">Email: {{ profile.email }} </p>
+                <p class="card-text">Description : {{ profile.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <h1>User Posts</h1>
+    <div class="container-fluid">
+        <div class="row">
+            {% for post in posts %}
+                <div class="card col-12 mt-3 mr-2 text-white bg-dark mb-3">
+                    <div class="card-header">ID: {{ post.id }} From User_id: {{ post.user_id }}</div>
+                    <div class="card-body">
+                        {% if post.img %}
+                            <img class="card-img-top" src="{{ post.img }}" alt="post image">
+                        {% endif %}
+                        <h5 class="card-title">Title: {{ post.title }}</h5>
+                        <p class="card-text">Content: {{ post.content }}</p>
+                        <p class="card-text">Score: {{ post.score }}</p>
+                        <a href="/Admin/deletePost/{{ post.id }}" class="btn btn-primary">Delete</a>
+                        <a href="/Admin/comments/{{ post.id }}" class="btn btn-primary">Comments</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

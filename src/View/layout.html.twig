@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% block stylesheet %}{% endblock %}
+    <link rel="icon" href="/assets/images/favicon.png">
+</head>
+
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/Home/index">Spacebook<img class="logo" src="https://cdn3.iconfinder.com/data/icons/glypho-miscellaneous/64/rocket-launch-512.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home/index">Home <span class="sr-only">(current)</span></a>
+            </li>
+            {% if session.login %}
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile/index/{{session.id}}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile/chat">Message</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile/allUser">Add User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/logout">Logout</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+<div class = "container">
+{% block content %}{% endblock %}
+</div>
+{% block javascript %}{% endblock %}
+<footer>
+    <ul class="nav fixed-bottom justify-content-center">
+        <li class="link">
+            <a class="nav-link active" href="#"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/home/contact">Contact Us</a>
+        </li>
+        <li class="copyright">
+            <p><a href="/Admin/login">&#169 industrie Spacebook</a> | création de site web | 2020</p>
+        </li>
+    </ul>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

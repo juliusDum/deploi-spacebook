@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h2>Delete profile {{ profile.firstname ~" "~ profile.lastname }} </h2>
+    <form class="form-horizontal" method="post">
+        <input type="hidden" value="{{ profile.id }}" name="id">
+        Are you sure to delete?
+        <br>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-danger">Yes</button>
+            <a class="btn" href="/profile/edit/">No</a>
+        </div>
+    </form>
+{% endblock %}

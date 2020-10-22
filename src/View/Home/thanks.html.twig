@@ -1,0 +1,10 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <h1>Thank you !</h1>
+    <p>You have registered under the pseudo of <strong class="thanks">{{ thanks.pseudo }}</strong><br>
+        Your name is <strong class="thanks">{{ thanks.firstname~' '~thanks.lastname }}</strong><br>
+        We sent you a confirmation email at this address : <strong class="thanks">{{ thanks.email }}</strong><br>
+        The Space Book team hope you will enjoy your time here.
+    </p>
+    <a href="/Home/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+{% endblock %}

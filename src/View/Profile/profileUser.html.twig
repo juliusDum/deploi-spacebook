@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="{{ user.avatar }}" class="card-img" alt="avatar">
+        </div>
+        <div class="col-mx-10">
+            <div class="card-body">
+                <h5 class="card-title">{{ user.firstname ~" "~ users.lastname }} </h5>
+                <p class="card-text">Pseudo : {{ user.pseudo }} </p>
+                <p class="card-text">Date of Birth : {{ user.date_of_birth|date("m/d/Y") }} </p>
+                <p class="card-text">Galaxy : {{ user.galaxy_name }} </p>
+                <p class="card-text">Planet : {{ user.planet_name }} </p>
+                <p class="card-text">email: {{ user.email }} </p>
+                <p class="card-text">Description : {{ user.description }}</p>
+                <a href="/profile/addFriend/{{ user.id }}" class="btn-follow" role="button" aria-pressed="true">Follow<img class="imgFollow" src="http://assets.stickpng.com/thumbs/58469c62cef1014c0b5e47f6.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

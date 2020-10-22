@@ -1,0 +1,24 @@
+{% extends 'admin_layout.html.twig' %}
+
+{% block content %}
+    <h1>Posts Manager</h1>
+    <div class="container-fluid">
+        <div class="row">
+            {% for post in posts %}
+                <div class="card col-12 mt-3 mr-2 text-white bg-dark mb-3">
+                    <div class="card-header">ID: {{ post.id }} From User_id: {{ post.user_id }}</div>
+                    <div class="card-body">
+                        {% if post.img %}
+                            <img class="card-img-top" src="{{ post.img }}" alt="post image">
+                        {% endif %}
+                        <h5 class="card-title">Title: {{ post.title }}</h5>
+                        <p class="card-text">Content: {{ post.content }}</p>
+                        <p class="card-text">Score: {{ post.score }}</p>
+                        <a href="/Admin/deletePost/{{ post.id }}" class="btn btn-primary">Delete</a>
+                        <a href="/Admin/comments/{{ post.id }}" class="btn btn-primary">Comments</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
